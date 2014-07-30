@@ -1,4 +1,3 @@
-
 api = 2
 core = 7.x
 
@@ -6,3 +5,5 @@ core = 7.x
 projects[redhen_raiser][type] = profile
 projects[redhen_raiser][download][type] = git
 projects[redhen_raiser][download][url] = "git@github.com:thinkshout/redhen_raiser.git"
+
+projects[registration][subdir] = 'contrib'
