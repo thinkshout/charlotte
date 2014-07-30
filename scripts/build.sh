@@ -107,19 +107,22 @@ if [ -d $DESTINATION ]; then
   echo "Existing directories removed."
 fi
 
-echo "Cloning Redhen Raiser..."
-git clone git@github.com:thinkshout/redhen_raiser.git redhen_raiser
 # Build the profile.
 echo "Building the profile..."
-drush make --no-core --contrib-destination --no-gitinfofile site.make tmp
-
+drush make --no-core --contrib-destination --no-gitinfofile --working-copy site.make tmp
+echo "Pulling in redhen_raiser core config:"
+cp tmp/profiles/redhen_raiser/redhen_raiser-core.make ./
 # Build the distribution and copy the profile in place.
 echo "Building the distribution..."
 drush make --no-gitinfofile core.make $TEMP_BUILD
-echo -n "Moving to destination... "
-cp -r tmp $TEMP_BUILD/profiles/redhen_raiser
+echo "Moving redhen_raiser profile to destination... "
+mv tmp/profiles/redhen_raiser $TEMP_BUILD/profiles/
+rmdir tmp/profiles
+echo "Moving custom files and modules to sites/all... "
+cp -R tmp/* $TEMP_BUILD/sites/all/
+echo "Cleaning up tmp files... "
 rm -rf tmp
-cp -r . $TEMP_BUILD/profiles/redhen_raiser
+#cp -r . $TEMP_BUILD/profiles/redhen_raiser
 mv $TEMP_BUILD $DESTINATION
 
 # run the install profile
