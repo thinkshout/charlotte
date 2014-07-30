@@ -107,6 +107,8 @@ if [ -d $DESTINATION ]; then
   echo "Existing directories removed."
 fi
 
+echo "Cloning Redhen Raiser..."
+git clone git@github.com:thinkshout/redhen_raiser.git redhen_raiser
 # Build the profile.
 echo "Building the profile..."
 drush make --no-core --contrib-destination --no-gitinfofile site.make tmp
