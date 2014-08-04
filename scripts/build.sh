@@ -115,6 +115,8 @@ cp tmp/profiles/redhen_raiser/redhen_raiser-core.make ./
 # Build the distribution and copy the profile in place.
 echo "Building the distribution..."
 drush make --no-gitinfofile core.make $TEMP_BUILD
+echo "Cleaning up..."
+rm redhen_raiser-core.make
 echo "Moving redhen_raiser profile to destination... "
 mv tmp/profiles/redhen_raiser $TEMP_BUILD/profiles/
 rmdir tmp/profiles
@@ -122,7 +124,8 @@ echo "Moving custom files and modules to sites/all... "
 cp -R tmp/* $TEMP_BUILD/sites/all/
 echo "Cleaning up tmp files... "
 rm -rf tmp
-#cp -r . $TEMP_BUILD/profiles/redhen_raiser
+cp -r . $TEMP_BUILD/sites/all/
+#cp -r modules $TEMP_BUILD/sites/all/modules/custom
 mv $TEMP_BUILD $DESTINATION
 
 # run the install profile
