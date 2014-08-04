@@ -22,7 +22,8 @@ projects[redhen_raiser][download][url] = "git@github.com:thinkshout/redhen_raise
 ; themes.
 ;
 ; These items will be placed in
-; sites/all/
+; sites/all/. Make sure to include the
+; [destination] as in the examples.
 ;
 ; A couple of recommended modules are
 ; included as examples: feel free to
@@ -34,6 +35,7 @@ projects[redhen_raiser][download][url] = "git@github.com:thinkshout/redhen_raise
 ;======================================
 
 ; mandrill
+projects[mandrill][subdir] = 'contrib'
 projects[mandrill][version] = '2.0'
 
 ;======================================
@@ -41,7 +43,13 @@ projects[mandrill][version] = '2.0'
 ;======================================
 
 ; mandrill library
+libraries[mandrill][destination] = "libraries"
 libraries[mandrill][download][type] = "get"
 libraries[mandrill][download][url] = "https://bitbucket.org/mailchimp/mandrill-api-php/get/1.0.52.tar.gz"
 libraries[mandrill][directory_name] = "mandrill"
-libraries[mandrill][destination] = "libraries"
+
+;-----------------------------------------
+; Themes
+;-----------------------------------------
+projects[shiny][subdir] = 'contrib'
+projects[shiny][version] = 1.5
