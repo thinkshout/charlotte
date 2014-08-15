@@ -1,0 +1,7 @@
+name = RedHen Raiser Custom Configuration
+description = Your customizations to RedHen Raiser's installation
+core = 7.x
+package = Custom
+version = 7.x-1.0
+project = charlotte
+features[features_api][] = api:2

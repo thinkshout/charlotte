@@ -1,0 +1,12 @@
+<?php
+/**
+ * @file
+ * Install file for the RedHen Raiser Customization module.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function redhen_raiser_custom_config_install() {
+    variable_set('admin_theme', 'shiny');
+}
