@@ -111,12 +111,12 @@ fi
 echo "Building the profile..."
 drush make --no-core --contrib-destination --no-gitinfofile --working-copy site.make tmp
 echo "Pulling in redhen_raiser core config:"
-cp tmp/profiles/redhen_raiser/redhen_raiser-core.make ./
+cp tmp/profiles/redhen_raiser/drupal-org-core.make ./
 # Build the distribution and copy the profile in place.
 echo "Building the distribution..."
 drush make --no-gitinfofile core.make $TEMP_BUILD
 echo "Cleaning up..."
-rm redhen_raiser-core.make
+rm drupal-org-core.make
 echo "Moving redhen_raiser profile to destination... "
 mv tmp/profiles/redhen_raiser $TEMP_BUILD/profiles/
 rmdir tmp/profiles

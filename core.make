@@ -1,7 +1,7 @@
 api = 2
 core = 7.x
 ; Pull in the recommended core version:
-includes[] = "redhen_raiser-core.make"
+includes[] = "drupal-org-core.make"
 
 ; If you would like to use a different core version, you can alter this file.
 ; Use with caution as this is obviously pretty dangerous.
