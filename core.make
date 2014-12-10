@@ -6,7 +6,7 @@ includes[] = "drupal-org-core.make"
 ; If you would like to use a different core version, you can alter this file.
 ; Use with caution as this is obviously pretty dangerous.
 ; How to override core directly:
-;projects[drupal][version] = "7.30"
+;projects[drupal][version] = "7.34"
 
 ; Alternative example for using Pantheon Drops:
 ;projects[drupal][download][type] = "git"
