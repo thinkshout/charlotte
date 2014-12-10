@@ -5,3 +5,5 @@ package = Custom
 version = 7.x-1.0
 project = charlotte
 features[features_api][] = api:2
+
+dependencies = mandrill
